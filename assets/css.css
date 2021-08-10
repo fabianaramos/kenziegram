@@ -1,0 +1,287 @@
+/*font-family: 'Roboto', sans-serif;*/
+
+/*GERAL
+reset css*/
+html, body, header, main, footer, article, div, span, p, a, figure, img, small, ul, li{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    outline: none;
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 30px;;
+}
+
+.hidden{
+    display: none;
+}
+
+
+/*BODY*/
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+/*HEADER*/
+header{
+    padding: 12px 0;
+    border-bottom: 2.5px solid #dbdbdb;
+}
+header .container{}
+header .row{
+    display: flex;
+    justify-content: space-between; 
+}
+header .row__coluna{}
+header a{}
+header a figure{}
+header a figure img{
+    width: 115px;
+}
+header ul{}
+header ul li{
+    display: inline-block;
+    margin-left: 15px;
+}
+header ul li a{}
+header ul li a img{}
+
+/*FOOTER*/
+
+/*MAIN PAGE*/
+main{
+    background-color: #fafafa;
+    padding: 30px; /*distância entre o conteúdo do elemento p/ a borda*/
+}
+main article{}
+main article .container{}
+main article .SectionAboutUser{
+    display:flex
+}
+main article .SectionAboutUser .row{}
+main article .SectionAboutUser .row__coluna--direita{
+    padding: 8px 15px;
+    margin-left: 20px;
+}
+main article .SectionAboutUser figure{}
+main article .SectionAboutUser figure img{
+    display: block;
+}
+main article .SectionAboutUser .AboutUser{}
+main article .SectionAboutUser .AboutUser__name{
+    display: flex;
+    align-items: center
+}
+main article .SectionAboutUser .AboutUser__name h2{
+    margin: 0;
+    font-size: 1.1rem;
+    margin-right: 10px;
+}
+main article .SectionAboutUser .AboutUser__name button{
+    font-size: 0.7rem;
+    padding: 7px 4px;
+    background-color: transparent;
+    border: 1px solid #DBDBDB;
+    border-radius: 2px;
+    font-weight: 600;
+    margin-left: 32px;
+}
+main article .SectionAboutUser .AboutUser__followers{
+    margin-top: 10px;
+}
+main article .SectionAboutUser .AboutUser__followers ul{
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+}
+main article .SectionAboutUser .AboutUser__followers ul li{}
+main article .SectionAboutUser .AboutUser__followers ul li a{
+    color: black;
+    font-size: 0.9rem;
+}
+main article .SectionAboutUser .AboutUser__followers ul li a strong{}
+main article .SectionAboutUser .AboutUser__following {}
+main article .SectionAboutUser .AboutUser__following ul{
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+}
+main article .SectionAboutUser .AboutUser__following ul li{
+    display: inline-block;
+    text-align: justify;
+}
+main article .SectionAboutUser .AboutUser__following ul li a{}
+main article .SectionAboutUser .AboutUser__following ul li a strong{}
+main article .SectionAboutUser .AboutUser__bio{
+    margin-top: 24px;
+}
+main article .SectionAboutUser .AboutUser__bio h3{
+    margin: 0px;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+}
+main article .SectionAboutUser .AboutUser__bio p{
+    font-size: 0.9rem;
+}
+main article .SectionAboutUser .AboutUser__bio p a{
+    color:rgb(17, 17, 82);
+    font-weight: 600;
+}
+
+main article .SectionUserHighlights{}
+main article .SectionUserHighlights ul{}
+main article .SectionUserHighlights ul li{
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 25px;
+    margin: center;
+    text-align: center;
+    font-size: 10px;
+}
+main article .SectionUserHighlights ul li figure{}
+main article .SectionUserHighlights ul li figure img{}
+
+.feed{}
+.feed nav{}
+.feed .feed__menu{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    border-top: solid 2px #ccc;
+}
+.feed .feed__menu li{
+    position: relative;
+}
+.feed .feed__menu li.ativo::before{
+    content: "";
+    display: block;
+    padding-top: 10px;
+    border-top: solid 2px #9b7a7a;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+.feed .feed__menu li a{
+    font-size: 12px;
+    padding: 0 5px;
+    font-weight: bold;
+    color: #000;
+}
+.feed__gallery{}
+.feed__gallery ul{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.feed__gallery ul li{
+    width: 100%;
+    max-width: 259px;
+    height: 259px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.feed__gallery ul li figure{}
+.eed__gallery ul li img{
+    width: 100%;
+}
+.feed__gallery ul li figcaption{}
+
+/*EXTRA*/
+
+/*@MEDIA*/
+@media screen and (min-width: 620px){
+    main article .secaoSobreUsuario .linha{
+        display: flex;
+    }
+    main article .SectionAboutUser .row__coluna{
+        flex-basis: 45%;
+    }
+    main article .SectionAboutUser ul{
+        justify-content: space-between;
+    }
+    .container{
+        max-width: 590px;
+    }
+    .feed__gallery ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .feed .feed__menu li{
+     margin: 0 22px;
+    }
+    
+}
+
+@media screen and (min-width: 840px){
+    .container {
+        max-width: 770px;
+    }
+    
+    main article .SectionAboutUser figure{
+        width: 140px;
+        height: 140px;
+    }
+    main article .SectionAboutUser .row__coluna--direita{
+        flex-basis: 100%;
+    }
+    main article .SectionAboutUser .AboutUser{
+        max-width: 370px;
+    }
+    main article .SectionAboutUser .AboutUser__name{
+        font: size 1.3rem;
+    }
+    main article .SectionAboutUser .AboutUser__name button{
+        padding: 7px 10px;
+    }
+    main article .SectionUserHighlights ul li figure img{
+        width: 80px;
+    }
+    main article .SectionUserHighlights ul li h3{
+        font-size: 0.8rem;
+    }
+    header ul li {
+        margin-left: 7px;
+    }
+    header figure img{
+        width: 140px;
+    }
+    header ul li a img {
+        width: 22px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container{
+        max-width: 840px;
+    }  
+    main article .SectionUserHighlights ul li h3{
+        font-size: 0.9rem;
+    }
+    main article .SectionUserHighlights ul li figure img{
+        width: 90px;
+    }
+    main article .SectionAboutUser .AboutUser{
+        max-width: 440px;
+    }
+    main article .SectionAboutUser .AboutUser__name h2 {
+        font-size: 1.4rem;
+    }
+    main article .SectionAboutUser .AboutUser__followers ul li a {
+        font-size: 1rem;
+    }
+    main article .SectionAboutUser .AboutUser__bio h3 {
+        font-size: 1rem;
+    }
+    main article .SectionAboutUser .AboutUser__bio p {
+        font-size: 0.9rem;
+    }
+}
